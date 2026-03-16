@@ -1,0 +1,22 @@
+[package]
+name = "polymarket-sl-tp-bot"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+async-trait = "*"
+anyhow = "*"
+axum = "*"
+chrono = { version = "*", features = ["serde"] }
+futures-util = "*"
+serde = { version = "*", features = ["derive"] }
+serde_json = "*"
+sqlx = { version = "*", features = ["runtime-tokio-rustls", "sqlite", "macros", "migrate", "chrono"] }
+thiserror = "*"
+tokio = { version = "*", features = ["full"] }
+tokio-tungstenite = "*"
+tracing = "*"
+tracing-subscriber = { version = "*", features = ["env-filter", "fmt"] }
+uuid = { version = "*", features = ["v4", "serde"] }
+
+rs-clob-client = { git = "https://github.com/Polymarket/rs-clob-client.git" }
